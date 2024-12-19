@@ -1,6 +1,4 @@
-# Backend DSA
 
-Backend del proyecto de DSA
 
 ### API REST
 
