@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Logout" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="80dp">
+
+        <!-- FrameLayout 包裹 ImageButton 以应用圆角背景 -->
+        <!-- store -->
+        <FrameLayout
+            android:id="@+id/btnstoreContainer"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/rounded_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"> <!-- 圆角背景 -->
+
+            <!-- ImageButton 放在 FrameLayout 中 -->
+            <ImageButton
+                android:id="@+id/btnstore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/store_button"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banania_store" />  <!-- 保证图片比例和填充 -->
+        </FrameLayout>
+
+        <!-- btnUserStuff -->
+        <FrameLayout
+            android:id="@+id/btnUserStuffContainer"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/rounded_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnUserStuff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banania_stuff" />
+        </FrameLayout>
+        <Button
+            android:id="@+id/btnFetchBadges"
+            android:layout_width="203dp"
+            android:layout_height="68dp"
+            android:text="Fetch badges"
+            android:visibility="visible" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+
+
+
